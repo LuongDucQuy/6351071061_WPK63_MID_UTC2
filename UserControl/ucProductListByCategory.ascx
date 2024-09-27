@@ -1,9 +1,11 @@
 ﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="ucProductListByCategory.ascx.cs" Inherits="de1.UserControl.ucProductListByCategory" %>
 <asp:ListView ID="ListView1" runat="server" DataKeyNames="ID" DataSourceID="ProductListByCategoryEntityDataSource">
     <ItemTemplate>
+        <br>
         <asp:Label ID="Label1" runat="server" Text='<%# Eval("Name") %>'></asp:Label>
         <br>
-        <asp:Image ID="Image1" runat="server" Text='<%# Eval("ImageFilePath") %>'/></asp:Image>
+        <asp:Image ID="Image1" runat="server" ImageUrl='<%# "~/images/Beverages/" + Eval("ImageFilePath") %>' />
+
         <br>
         <asp:Label ID="Label2" runat="server" Text='<%# Eval("Price") %>'></asp:Label>
         <br>
